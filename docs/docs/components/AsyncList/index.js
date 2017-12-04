@@ -89,12 +89,11 @@ export default class extends React.Component {
                 <List
                     awaitMore={this.state.awaitMore}
                     itemsRenderer={this.renderItems}
-                    currentLength={this.state.repos.length}
+                    itemCount={this.state.repos.length}
                     onIntersection={this.handleLoadMore}
                     pageSize={PAGE_SIZE}
-                >
-                    {this.renderItem}
-                </List>
+                    render={this.renderItem}
+                />
             </div>
         );
     }
