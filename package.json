@@ -34,18 +34,21 @@
     "lint-staged": "^6.0.0",
     "prettier": "^1.8.2",
     "raf": "^3.4.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "^16.1.1",
     "rimraf": "^2.6.1",
     "standard-version": "^4.2.0",
     "style-loader": "^0.20.0",
+    "typescript": "^2.6.2",
     "validate-commit-msg": "^2.14.0",
     "whatwg-fetch": "^2.0.3"
   },
   "files": [
-    "lib"
+    "lib",
+    "types/index.d.ts"
   ],
+  "types": "types/index.d.ts",
   "homepage": "https://github.com/researchgate/react-intersection-list#readme",
   "keywords": [
     "Intersection",
@@ -93,7 +96,7 @@
     "commitmsg": "validate-commit-msg",
     "coverage": "yarn test -- --coverage",
     "format": "eslint --fix {src,docs/docs}/**/*.js",
-    "lint": "eslint {src,docs/docs}/.",
+    "lint": "eslint {src,docs/docs}/. && tsc --project types",
     "precommit": "yarn lint-staged && yarn test",
     "prepare": "yarn clear && yarn build",
     "prepublishOnly": "yarn test",
