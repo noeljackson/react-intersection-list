@@ -3,7 +3,7 @@ import List from '../../../../src';
 
 const PAGE_SIZE = 20;
 
-export default class extends React.Component {
+export default class AsyncList extends React.Component {
     state = {
         awaitMore: true,
         isLoading: false,
